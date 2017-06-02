@@ -5,26 +5,38 @@
     <title>Basic Data Binding - Vue.js 2 Step by Step</title>
 </head>
 <body>
+<!--Vue.js 的核心是一个允许采用简洁的模板语法来声明式的将数据渲染进 DOM：-->
 <div id="root">
     <input type="text" id="input" v-model="message">
 
     <p>The value of the input is: {{ message }}</p>
 </div>
 
+<!--官方指南假设你已有 HTML、CSS 和 JavaScript 中级前端知识。
+如果你刚开始学习前端开发，将框架作为你的第一步可能不是最好的主意——掌握好基础知识再来！
+之前有其他框架的使用经验对于学习 Vue.js 是有帮助的，但这不是必需的。-->
 
-
+<!--尝试 Vue.js 最简单的方法是使用 JSFiddle Hello World 例子。
+你可以在浏览器新标签页中打开它，跟着例子学习一些基础用法。
+我们这里创建一个本地的 .html 文件，然后通过引用vue.js的CDN文件-->
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!--你可以查看安装教程来了解其他安装 Vue 的选项。
+链接地址： http://cn.vuejs.org/guide/installation.html
+请注意我们不推荐新手直接使用 vue-cli，尤其是对 Node.js 构建工具不够了解的同学。-->
 
+
+<!--Vue代码-->
 <script>
-    let data = {
-        message: 'Hello World!'
-    };
 
     new Vue ({
         el: '#root',
-        data: data
+        data: {
+            message: 'Hello World!'
+        }
     })
+
+
 </script>
 
 </body>
